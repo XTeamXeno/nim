@@ -1,7 +1,7 @@
 import random
 import time
 
-total = 12  # Number of total coins left
+coins_left = 12  # Number of total coins left
 
 
 def players_turn(total):
@@ -18,3 +18,4 @@ def players_turn(total):
     print("Ok!")
     time.sleep(0.2)
     total = total - take_away
+

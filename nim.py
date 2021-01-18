@@ -14,9 +14,9 @@ def players_turn(total):  # define players choices and total will equal coins_le
         take_away = int(input("How many coins would you like to take away? (1/2/3)"))
         # Number of coins to subtract from the total
         time.sleep(0.2)
-        if total < 0:  # Too many
+        if take_away > total:  # Too many
             print("You took to many!")
-            exit()
+            loop = 1
         if take_away > 3:  # Too many
             print("You took to many!")
             loop = 1

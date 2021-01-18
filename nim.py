@@ -5,20 +5,24 @@ coins_left = 12  # Number of total coins left
 
 
 def players_turn(total):  # define players choices and total will equal coins_left later in the code
+    take_away = 0
+    loop = 1
     print("Now its your turn!")
     time.sleep(0.2)
-    take_away = int(input("How many coins would you like to take away? (1/2/3)"))
-    # Number of coins to subtract from the total
-    time.sleep(0.2)
-    if total < 0:  # Too many
-        print("You took to many!")
-        exit()
-    if take_away > 3:  # Too many
-        print("You took to many!")
-        exit()
-    if take_away < 1:  # Too few
-        print("You took to few")
-        exit()
+    while loop == 1:
+        loop = 0
+        take_away = int(input("How many coins would you like to take away? (1/2/3)"))
+        # Number of coins to subtract from the total
+        time.sleep(0.2)
+        if total < 0:  # Too many
+            print("You took to many!")
+            exit()
+        if take_away > 3:  # Too many
+            print("You took to many!")
+            loop = 1
+        if take_away < 1:  # Too few
+            print("You took to few!")
+            loop = 1
     print("Ok!")
     time.sleep(0.2)
     total = total - take_away

@@ -69,3 +69,4 @@ while active:
             print("The computer won! Better luck next time")
             input("Enter to end")
         time.sleep(0.2)
+# Lol done
